@@ -1,0 +1,8 @@
+version: '2'
+services:
+    php:
+        build: .docker/images/php-fpm
+        container_name: php-fpm
+        restart: always
+        volumes:
+            - .:/var/www/backend
