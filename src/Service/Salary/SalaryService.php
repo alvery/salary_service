@@ -12,7 +12,7 @@ class SalaryService
     /**
      * @var ProcessorInterface[]
      */
-    private $processors;
+    private $processors = [];
 
     public function __construct()
     {

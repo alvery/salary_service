@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace App\Service\Salary\Processor;
 
 use App\Entity\Employee;
-use http\Exception\InvalidArgumentException;
+use InvalidArgumentException;
 
 class CarProcessor implements ProcessorInterface
 {
