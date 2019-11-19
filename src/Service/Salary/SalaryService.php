@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Service\Salary;
 
 use App\Entity\Employee;
@@ -25,7 +27,9 @@ class SalaryService
             $processor->process($employee);
         }
 
-        return $employee->getSalary() * $employee->getTax() / 100;
+        $salary = $employee->getSalary() - $employee->getSalary() * $employee->getTax() / 100;
+
+        return $salary;
     }
 
 }

@@ -42,9 +42,21 @@ class Employee
      */
     private $tax;
 
-    public function __construct()
+    public function __construct(
+        string $name,
+        int $age,
+        int $kidsAmount,
+        bool $companyCar,
+        int $salary,
+        $tax = self::DEFAULT_SALARY_TAX_PERCENT
+    )
     {
-        $this->tax = self::DEFAULT_SALARY_TAX_PERCENT;
+        $this->name = $name;
+        $this->age = $age;
+        $this->kidsAmount = $kidsAmount;
+        $this->companyCar = $companyCar;
+        $this->salary = $salary;
+        $this->tax = $tax;
     }
 
     /**
